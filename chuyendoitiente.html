@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="input">Amount</label></td>
+            <td><label for="from">Form Currency</label></td>
+            <td><label for="to">To Currency</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="input"></td>
+            <td><select id="from">
+                <option value="1">Việt Nam</option>
+                <option value="23000">USD</option>
+            </select></td>
+               <td><select id="to">
+                    <option value="23000">USD</option>
+                    <option value="1">VietNam</option>
+               </select></td>
+           <td>
+               <button onclick="display()">convert </button>
+            </td>
+        </tr>
+    </table>
+<p>Result: <span id="result"></span> </p>
+</body>
+<script>
+   function display() {
+       let input = parseInt(document.getElementById("input").value)
+       let form = parseInt(document.getElementById("from").value)
+       let to = parseInt(document.getElementById("to").value)
+       document.getElementById("result").innerText = (input*form/to)
+   }
+
+
+
+
+
+</script>
+
+
+
+</html>
